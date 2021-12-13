@@ -1,0 +1,134 @@
+**지시자의 종류
+
+	page 지시자
+		필요한 인코딩방식, 라이브러리 클래스를 import
+		JSP 페이지에 대한 정보 설정
+		<%@ page ... %>
+	
+	include
+		이미 있는 jsp문서를 현재 문서에 포함
+		JSP페이지의 특정 영역에 다른 문서 포함
+		<%@ include ...%>
+	
+	taglib
+		태그만으로 구성되게
+		java문법을 대신할 태그를 구성하는것
+		JSP페이지에서 사용할 태그라이브러리 설정
+		<%@ taglib ...%>
+		
+	**page 디렉티브태그
+		현재 JSP페이지에 대한 정보를 설정하는 태그
+		JSP 페이지의 어디에서든 선언할 수 있지만 일반적으로 JSP페이지의 최상단에 선언하는 것을 권장
+		<%@ page ...%>
+		
+	올 수 있는 속성
+		language
+		contentType
+		pageEncoding
+		errorPage			현재 JSP페이지에 오류가 발생했을 때 보여줄 오류 페이지설정
+		isErrorPage			현재 JSP페이지가 오류 페이지인지 여부를 설정				기본값: false
+		
+	**include 디렉티브 태그
+		현재 jsp 페이지의 특정 영역에 외부파일의 내용을 포함하는 태그
+		현재 JSP페이지에 포함할 수 있는 외부파일
+			HTML,JSP,텍스트 파일
+		include 디렉티브 태그는 JSP페이지 어디에서든 선언가능
+		
+		<%@ include file="파일명" %>
+	
+	**taglib 디렉티브태그 --> 반복문이나 조건문 등을 대신하기 위해
+		현재 JSP페이지에 표현언어, JSTL, 사용자 정의 태그(custom tag) 등 태그라이브러리를 설정하는 태그
+		
+		JSTL 라이브러리 다운
+		--태그라이브러리 중 표준으로 만들어진것
+			커스텀태그 중 표준으로 만들어진것
+			
+https://tomcat.apache.org/taglibs/standard/
+Standard 1.1	JSTL 1.1	Servlet 2.4, JavaServer Pages 2.0	download
+[DIR] binaries/    
+jakarta-taglibs-standard-1.1.2.zip    다운로드		
+C:\Users\hkhao\Downloads\jakarta-taglibs-standard-1.1.2\lib
+
+	
+<% taglib uri="경로" prefix="태그 식별자"%>
+
+%{변수의내용을 출력}
+-> 표현언어
+
+**액션태그
+
+	웹어플리케이션(JSP)에서 사용하는 자바객체를
+	Bean이라고 한다
+	
+	
+	forward 액션태그
+		현재 JSP페이지에서 다른 페이지로 이동하는 태그
+		JSP 컨테이너는 현재 JSP페이지에서 forward 액션태그를 만나면
+			그 전까지 출력버퍼에 저장되어 있떤 내용을 모두 삭제하고
+			forward 액션태그에 설정된 페이지로 프로그램의 제어가 이동
+	
+	<jsp:forwadrd page="파일명" /> --반드시 끝내는 태그 필요
+	or
+	<jsp:Forward page="파일명">   </jsp:forward>
+		http://localhost:8080/day1213/red.jsp 옮겨간 페이지를 노출x
+	page 속성값
+		현재 jsp페이지에서 이동할 페이지의 외부파일명
+		외부 파일은 현재 JSP페이지와 같은 디렉터리에
+		
+=============================================
+
+다른 문서로 이동시키기
+	<jsp:forward />
+		=> 이동한 문서가 주소표시줄에 노출되지 않음
+	response.sendRedirect();
+		=> 이동한 문서가 주소표시줄에 노출됨
+	//http://localhost:8080/day1213/yellow2.jsp
+	옮겨간 문서를 노출	
+
+다른 문서를 현재 문서에 포함하기
+**include 지시자
+	<%@ include %>
+	==> 포함되는 문서의 서블릿이 생성되지 않음
+		(지시자가 있는문서)
+		
+**include 액션태그
+	include 디렉티브 태그처럼 현재 JSP페이지의 특정영역에 외부파일의 내용을 포함하는 태그
+	현재 JSP페이지에 포함할 수 있는 외부파일은은 HTML,JSP,서블릿 페이지 등
+	
+	<jsp:include page="파일명" flash="flash/>
+	==> 포함되는 문서의 서블릿이 생성됨
+	
+HTML, javaSCript
+문자열: '', ""
+
+java
+문자열: ""
+
+**자바빈즈
+	동적 콘텐츠 개발을 위해 자바코드를 사용하여 자바클래스로 로직을 작성하는 방법
+	JSP페이지에서 화면을 표현하기 위한 계산식이나 자료의 처리를 담당하는 자바코드를 따로 분리하여 작성하는 것
+	JSP페이지가 HTML과 같이 쉽고 간단한 코드만으로 구성
+
+	useBean액션태그
+		JSP에서 자
+		객체 생성
+		
+		<jsp:useBean id="person" class="com.sist.vo.Person" scope="request"/>
+			useBean 액션태그로 객체 생성 시, 기본생성자가 요구됨
+				
+	--
+	객체의 속성값을 변경하기 위한 액션태그
+	setProperty 액션태그
+	
+	jsp:setProperty name="자바빈즈 식별이름" property="프로퍼티이름" value=""
+	
+	요청파라미터이름과 자바빈즈의 프로퍼티이름이 모두일치하는경우
+	property="*"
+	
+	폼태그 안의 모든 정보를 담아올수잇음
+	
+	
+	
+	
+	
+	

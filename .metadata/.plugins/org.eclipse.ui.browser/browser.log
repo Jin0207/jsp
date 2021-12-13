@@ -1,0 +1,42 @@
+
+12월 10, 2021 10:35:52.882 NEW SESSION
+12월 10, 2021 10:35:52.882 [9312:2084:1210/103552.880:ERROR:device_event_log_impl.cc(214)] [10:35:52.879] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 10, 2021 10:35:52.883 [9312:2084:1210/103552.880:ERROR:device_event_log_impl.cc(214)] [10:35:52.880] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 10, 2021 10:35:52.922 [9312:15932:1210/103552.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 10, 2021 10:35:52.930 [9312:15932:1210/103552.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 10, 2021 10:35:52.930 [9312:15932:1210/103552.922:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 10, 2021 10:35:52.931 [9312:15932:1210/103552.924:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 10, 2021 10:44:24.154 [5048:14256:1210/104424.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 10, 2021 10:44:24.155 [5048:14256:1210/104424.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 10, 2021 10:44:24.156 [5048:14256:1210/104424.154:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 10, 2021 10:44:24.157 [5048:14256:1210/104424.157:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 10, 2021 10:44:24.162 [5048:17136:1210/104424.161:ERROR:device_event_log_impl.cc(214)] [10:44:24.161] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 10, 2021 10:44:24.162 [5048:17136:1210/104424.162:ERROR:device_event_log_impl.cc(214)] [10:44:24.161] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+12월 13, 2021 11:43:21.837 NEW SESSION
+12월 13, 2021 11:43:21.837 [10244:15944:1213/114321.835:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 13, 2021 11:43:21.838 [10244:15944:1213/114321.835:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 13, 2021 11:43:21.838 [10244:15944:1213/114321.835:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 13, 2021 11:43:21.841 [10244:15944:1213/114321.841:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 13, 2021 11:43:21.850 [10244:12312:1213/114321.849:ERROR:device_event_log_impl.cc(214)] [11:43:21.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 11:43:21.850 [10244:12312:1213/114321.850:ERROR:device_event_log_impl.cc(214)] [11:43:21.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:00:26.879 [10244:12312:1213/120026.878:ERROR:device_event_log_impl.cc(214)] [12:00:26.878] USB: usb_service_win.cc:261 Failed to get device driver name: 요소가 없습니다. (0x490)
+12월 13, 2021 12:13:23.442 [4116:18688:1213/121323.442:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 13, 2021 12:13:23.443 [4116:18688:1213/121323.442:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 13, 2021 12:13:23.443 [4116:18688:1213/121323.442:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 13, 2021 12:13:23.445 [4116:18688:1213/121323.445:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 13, 2021 12:13:23.459 [4116:7316:1213/121323.459:ERROR:device_event_log_impl.cc(214)] [12:13:23.459] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:13:23.460 [4116:7316:1213/121323.459:ERROR:device_event_log_impl.cc(214)] [12:13:23.459] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:13:23.460 [4116:7316:1213/121323.459:ERROR:device_event_log_impl.cc(214)] [12:13:23.460] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:14:49.769 [6228:10372:1213/121449.769:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 13, 2021 12:14:49.770 [6228:10372:1213/121449.769:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 13, 2021 12:14:49.770 [6228:10372:1213/121449.769:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 13, 2021 12:14:49.772 [6228:10372:1213/121449.772:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 13, 2021 12:14:49.783 [6228:8104:1213/121449.783:ERROR:device_event_log_impl.cc(214)] [12:14:49.784] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:14:49.784 [6228:8104:1213/121449.784:ERROR:device_event_log_impl.cc(214)] [12:14:49.785] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:17:33.883 [7232:13684:1213/121733.883:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+12월 13, 2021 12:17:33.884 [7232:13684:1213/121733.883:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+12월 13, 2021 12:17:33.886 [7232:13684:1213/121733.883:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+12월 13, 2021 12:17:33.889 [7232:13684:1213/121733.889:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+12월 13, 2021 12:17:33.895 [7232:5844:1213/121733.895:ERROR:device_event_log_impl.cc(214)] [12:17:33.894] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 13, 2021 12:17:33.896 [7232:5844:1213/121733.895:ERROR:device_event_log_impl.cc(214)] [12:17:33.895] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

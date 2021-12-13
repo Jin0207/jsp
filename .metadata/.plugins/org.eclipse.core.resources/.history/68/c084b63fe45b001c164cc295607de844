@@ -1,0 +1,12 @@
+package com.sist.dao;
+
+import java.util.ArrayList;
+
+import com.sist.vo.Product;
+
+public class ProductDAO {
+	
+	public ArrayList<Product> insertProduct(){
+		
+	}
+}

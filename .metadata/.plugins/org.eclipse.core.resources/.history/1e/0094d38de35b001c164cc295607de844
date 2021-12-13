@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		request.setCharacterEncoding("euc-kr");
+	%>
+	<jsp:useBean id="p" class="com.sist.vo.Product"/>
+	<jsp:setProperty property="*" name="p"/>
+	등록한 상품정보는 다음과 같습니다.<br>
+	<%=p %>
+	
+</body>
+</html>

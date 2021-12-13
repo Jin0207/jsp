@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body bgcolor="yellow">
+	<%
+		String color = request.getParameter("bgcolor");
+		String name = request.getParameter("name");
+	%>
+	move.jsp로 이동함
+	<hr>
+	이름: 홍길동
+</body>
+</html>

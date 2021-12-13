@@ -1,0 +1,6 @@
+package com.sist.vo;
+
+public class Person {
+	private int id = 20210001;
+	
+}

@@ -1,0 +1,19 @@
+package com.sist.dao;
+
+import java.util.ArrayList;
+
+import com.sist.vo.Product;
+
+public class ProductDAO {
+	String driver = "oracle.driver.OracleDriver";
+	String user = "driver.oracle.thin.@localhost.1521.XE";
+	String user = "";
+	String user = "";
+	
+	public ArrayList<Product> insertProduct(){
+		ArrayList<Product> list = new ArrayList<Product>();
+		String sql="insert into goods values(?,?,?,?,null)";
+		
+		return list;
+	}
+}

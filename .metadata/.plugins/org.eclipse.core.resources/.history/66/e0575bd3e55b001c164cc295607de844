@@ -1,0 +1,24 @@
+<%@page import="com.sist.dao.ProductDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		request.setCharacterEncoding("euc-kr");
+	%>
+	<jsp:useBean id="product" class="com.sist.vo.Product"/>
+	<%
+		ProductDAO dao = new ProductDAO();
+		dao.insertProduct(%>product<%)
+	%>
+	<jsp:setProperty property="*" name="product"/>
+	등록한 상품정보는 다음과 같습니다.<br>
+	<%=product %>
+	
+</body>
+</html>

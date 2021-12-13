@@ -1,0 +1,64 @@
+**지시자
+
+	page 지시자
+		필요한 인코딩방식, 라이브러리 클래스를 import
+		JSP 페이지에 대한 정보 설정
+		<%@ page ... %>
+	include
+		이미 있는 jsp문서를 현재 문서에 포함
+		JSP페이지의 특정 영역에 다른 문서 포함
+		<%@ include ...%>
+	taglib
+		태그만으로 구성되게
+		java문법을 대신할 태그를 구성하는것
+		JSP페이지에서 사용할 태그라이브러리 설정
+		<%@ taglib ...%>
+		
+	**page 디렉티브태그
+		현재 JSP페이지에 대한 정보를 설정하는 태그
+		JSP 페이지의 어디에서든 선언할 수 있지만 일반적으로 JSP페이지의 최상단에 선언하는 것을 권장
+		<%@ page ...%>
+		
+	올 수 있는 속성
+		language
+		contentType
+		pageEncoding
+		errorPage			현재 JSP페이지에 오류가 발생했을 때 보여줄 오류 페이지설정
+		isErrorPage			현재 JSP페이지가 오류 페이지인지 여부를 설정				기본값: false
+		
+	**include 디렉티브 태그
+		현재 jsp 페이지의 특정 영역에 외부파일의 내용을 포함하는 태그
+		현재 JSP페이지에 포함할 수 있는 외부파일
+			HTML,JSP,텍스트 파일
+		include 디렉티브 태그는 JSP페이지 어디에서든 선언가능
+		
+		<%@ include file="파일명" %>
+	
+	**taglib 디렉티브태그
+		현재 JSP페이지에 표현언어, JSTL, 사용자 정의 태그 등 태그라이브러리를 설정하는 태그
+		
+		JSTL 라이브러리 다운
+https://tomcat.apache.org/taglibs/standard/
+Standard 1.1	JSTL 1.1	Servlet 2.4, JavaServer Pages 2.0	download
+[DIR] binaries/    
+jakarta-taglibs-standard-1.1.2.zip    다운로드		
+C:\Users\hkhao\Downloads\jakarta-taglibs-standard-1.1.2\lib
+
+	
+<% taglib uri="경로" prefix="태그 식별자"%>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

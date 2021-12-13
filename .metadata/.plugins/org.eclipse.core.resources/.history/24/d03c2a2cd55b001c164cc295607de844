@@ -1,0 +1,7 @@
+package com.sist.vo;
+
+public class Person {
+	private int id = 20210001;
+	private String name = "ȫ�浿";
+	
+}
