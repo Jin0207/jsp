@@ -1,0 +1,138 @@
+getProperty 액션태그
+	자바빈즈의 getter()메소드에 접근하여 자바빈즈의 멤버변수인 프로퍼티의 값을 가져오는 태그
+	<jsp:getProperty name ="" property=""/>
+	
+
+Repository
+
+**내장객체
+
+	JSP 페이지에서 사용할 수 있또록 JSP컨테이너에 미리 정의된 객체
+	JSP 페이지가 서블릿 프로그램으로 번역될 때, JSP 컨테이너가 자동으로 내장 객체를 멤버변수, 메소드 매개변수 등의 각종 참조변수
+	
+	request 	사용자가 요청한 모든 정보를 가지고 있음
+				-- form 태그에 입력하여 submit눌렀을 때
+				
+	response	응답 정보를 저장
+	out			브라우저에 출력을 담당하고 있는 출력 스트림
+	session		접속한 클라이언트를 구별하기위한 논리적 연결단위
+				상태유지하기 위해 (로그인했나 안했나, 투표했나 안했나 등 현재 페이지에서 일어난 일을 다른 페이지에서도 알수 있도록 상태를 유지하기 위한 객체)
+				map,hashmap과 유사
+				사용자마다 다른 session이 할당
+				브라우저를 닫으면 소멸
+	application		공동으로 사용
+					서버가 종료될때까지 
+					모든 클라이언트가 공동으로 사용하는 영역
+					
+	* exception을 제외한 모든 내장객체들은 모든 jsp에서 자동으로 생성됨
+		그러나 exception은 지시자인 isErrorPage="true"라고 설정된 jsp에서만 생성됨				
+	exception		JSP페이지의 예외발생 처리
+					에러처리담당문서인 is
+					
+					
+	-------------------------------------------------------------------
+	
+	속성 처리 메소드의 종류
+	request, session, application, pageContext
+	
+	request
+		다음 연결된 문서까지
+	session
+		브라우저 닫기 전까지
+	application
+		서버를 종류하기 전까지
+	pageContext
+		현재페이지
+	
+	setAttribute(String name, Object value)
+		반환: void
+		해당 내장 객체의 속성 이름이 name인 속성 값을 value로 저장
+	getAttribute(String name)
+		반환: Object
+		해당 내장 객체의 속성 이름이 name인 속성 값을 가져옴
+	removeAttribute(String name)
+		반환: void
+		해당 내장 객체의 속성 이름이 name인 속성을 삭제
+	getAttributeNames()
+		반환: java.util.Enumeration
+		해당 내장 객체의 모든 속성 이름을 가져옴
+		단, pageContext내장객체는 해당 메소드 제공 x
+		
+	---
+	request 내장객체
+		JSP 페이지에서 가장 많이 사용되는 기본 내장 객체
+		웹브라우저에서 서버의 JSP페이지로 전달하는 정보 저장
+		웹브라우저에서 서버로 전달되는 정보를 처리하기 위해
+		javax.servlet.http.HttpServletRequest 객체 타입의 request내장 객체를 사용하여 사용자의 정보를 파악할 수 있다
+		
+	요청 파라미터 관련 메소드 종류
+		파라미터: 전달된 값, 메소드의 매개변수, 폼태그의 입력한 정보 등
+		
+		getParameter(String name)
+			반환: String
+			 요청 파라미터 이름이 name인 값을 전달받음
+			 요청 파라미터 값이 없으면 null 반환
+		
+		getParameterValues(String name)
+			반환: String[]
+			모든 요청 파라미터 이름이 name인 값을 배열형태로 전달받음
+			ex)
+				<input type = "checkbox" name= "hobby" value="값1">
+		getParameterNames()
+			모든 요청 파라미ㅓ의 이름과 값을 Enumeration 객체 타입으로 전달받음
+			반환: java.util.Enumeration
+		getParameterMap()
+			반환: java.util.Map
+			모든 요청 파라미터의 이름과 값을 Map객체 타입으로 전달받음
+			
+			인코딩 UTF-8 설정 
+			servers-
+			server.xml-source탭 - <connector connectionTimeout~~
+			URIEncoding="UTF-8" 추가
+			
+			문서생성시 자동생성
+			window-preferences-web-각해당파일누름
+			
+		요청 HTTP 헤더 관련 메소드
+			웹 브라우저는 HTTP 헤더에 부가적인 정보를 담아 서버로 전송
+			
+		요청 HTTP 헤더 관련 메소드의 종류
+		
+		getHeader(String name) String 설정한 name의 헤더값가져옴
+		getHeaders(String name) Enumeration 설정한 name의 헤더 목록 값 가져옴
+		getHeaderNames()
+		getCookies	모든 쿠키값을 가져옴
+					요청한 클라이언트에 기록된 모든 쿠키를 읽어옴
+		
+	
+		response 내장객체
+			사용자의 요청을 처리한 결과를 서버에서 웹 브라우저로 전달하는 정보를 저장하고
+			서버는 응답 헤더와 요청 처리 결과 데이터를 웹 브라우저로 보냄
+			
+			정보를 다른 곳으로 보낼때 사용
+		
+		redirection
+		
+		 사용자의 아이디와 암호가 올바른지 확인
+		 	
+	
+		폼처리
+		폼(form)
+			사용자와 웹 애플리케이션이 상호 작용하는 중요한 기술 중 하나
+			
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
