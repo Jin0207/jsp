@@ -1,10 +1,10 @@
 <%@page import="java.util.Date"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Insert title here</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -33,7 +33,6 @@
 		</div>
 		<h3><%=tagline %></h3>
 		<%
-			response.setIntHeader("Refresh", 5);
 			Date day = new Date();
 			String am_pm;
 			int hour = day.getHours();
@@ -46,7 +45,7 @@
 				hour = hour - 12;
 			}
 			String CT = hour + ":" + minute+":"+second+" "+am_pm;
-			out.print("ÇöÀç Á¢¼Ó ½Ã°¢:" + CT + "<br>");
+			out.print("í˜„ì¬ ì ‘ì† ì‹œê°:" + CT + "<br>");
 		%>
 	</div>
 	

@@ -28,4 +28,16 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/java/com</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/hkhao/Downloads/WebMarket/java/com</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/resources/images</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/hkhao/Downloads/images</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

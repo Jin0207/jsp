@@ -1,0 +1,74 @@
+싱글턴 오브젝트
+	processAddProduct.jsp에서도 ProductRepository가 필요하고
+	products에서도 ProductRepository가 필요함.
+	
+	두 곳에서 사용하는 객체가 서로 다른 객체가 아닌
+	하나의 객체를 생성하여 그 객체를 두 곳이 공유하도록하는 방식을 싱글턴 오브젝트라고 한다.
+	==> 매번 객체를 생성하는 것이 아니라 한개의 객체를 생성해 그것을 공유하도록하는 방식
+	
+**파일업로드
+	웹 브라우저에서 서버로 파일을 전송하여 서버에 전송하는 것
+	서버로 업로드할 수 있는 파일
+		-텍스트 파일, 바이너리 파일, 이미지 파일, 문서 등
+	웹 브라우저에서 서버로 파일을 전송하기 위해 JSP페이지에 폼태그사용
+	
+	파일 업로드를 위한 JSP 페이지
+		<form action="JSP파일" method="POST" enctype="multipart/form-data">	*enctype : 인코딩타입
+			<input type="file" name="요청 파라미터 이름">
+		</form>
+	
+	*method 속성은 반드시 "post"
+	*enctype 속성은 반드시 "multipart/form-data"
+	
+	파일 업로드 처리방법
+		오픈 라이브러리인 cos.jar나
+		
+	*cos.jar 다운로드
+		http://www.servlets.com/cos/
+		cos-20.08.zip 다운
+		C:\Users\hkhao\Downloads\cos-20.08\lib의 파일을 webapp-web-inf-lib안에 넣기
+		
+	MultipartRequest
+		
+		클라이언트가 보내온 파일을 서버에 저장하기위한 클래스
+		
+		 getParameter() 일반데이터의 값
+		 getFileNames() 파일의 데이터
+		 
+		 
+	파일 업로드 경로가
+		c:/upload 폴더에 파일을 저장하도록 지정하면
+		c:/upload폴더는 서버의 컴퓨터에만 존재하는 폴더이기에 업로드한 파일을 클라이언트들에게 서비스할순없다,
+		
+		만약, 그거이 이미지 파일이라면
+		모든 클라이언트 컴퓨터에 c:/upload폴더가 존재하는 것이 아니기에 이미지를 보여줄수없다
+		
+		<img src="c:/upload/ball1.jpg>
+	
+		클라이언트가 업로드한 파일을 단순히 서버에 기록만 하는 경우라면
+		서버에 어디라도 저장해도 관계없다.
+		
+		그러나 업로드한 파일을 다시 클라이언트들에게 보여줘야한다면,
+		반드시. 웹어플리케이션을 기준으로 폴더를 만들고 거기에 업로드해야한다.
+		
+		
+	유효성 검사(validation)
+		사용자가 폼페이지에 입력한 데이터 값이 올바른 값이 입력되었는지 검사하는 것
+		
+		유효검사를 위한 핸들러 함수
+			폼페이지에서 이벤트가 발생했을 때, 동작하는 함수
+					
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
