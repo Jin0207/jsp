@@ -14,7 +14,7 @@
 	while(en.hasMoreElements()){
 		String name = (String)en.nextElement();
 		String value = request.getParameter(name);
-		out.println(name + "===>" + value);
+		out.println(name + "===>" + value + "<br>");
 	}
 %>
 </body>
