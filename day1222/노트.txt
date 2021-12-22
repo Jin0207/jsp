@@ -1,0 +1,30 @@
+create table board(
+	no number primary key,
+	title varchar2(100),
+	writer varchar2(20),
+	pwd varchar2(20),
+	content varchar2(3000),
+	regdate date,
+	hit number,
+	fname varchar2(50),
+	fsize number
+);
+
+-----------------------------------------------------------------------
+
+http://localhost:8080/day1222/listBoard.do 요청 get방식 --> doGet 근데 init이 먼저 실행됨
+
+SistController.java 동작
+init 동작
+get방식으로 요청해서 doGet메소드 동작
+proRequest 메소드 동작
+서비스 명 파악위해 uri를 가져오고, uri에서 substr로 서비스명만 가져와 cmd에 저장함
+map으로부터 일처리담당자객체를 끄집어냄 ==> new ListBoadrAction()
+그 일처리담당자객체에게 일을 맡김
+해당 파일의 proRequest()
+
+---
+insert into board(no,title,writer,regdate) values(1,'a','a',sysdate);
+insert into board(no,title,writer,regdate) values(2,'b','b',sysdate);
+
+
