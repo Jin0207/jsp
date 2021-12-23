@@ -1,0 +1,79 @@
+**페이징처리
+
+한 화면에 보여줄 게시물의 수를 10개씩 보여주도록
+
+int pageSize = 10; //한 화면에 보여줄 레코드의 수
+int totalRecord = 43; //전체 레코드수
+int totalPage = Math.ceil(43/10); //전체페이지수
+
+ArrayList에 그 페이지에 보여줘야할 레코드 10개만 담아 주도록 한다
+그렇게 하려면
+현재 페이지에 따른 보여주어야할 시작레코드와 마지막레코드를 계산해야한다.
+
+만약 현재페이지가 1페이지라면 시작레코드는 1 마지막레코드는 10
+
+만약 현재페이지가 1페이지라면 시작레코드는 11 마지막레코드는 20
+
+현재페이지를 위한 pageNUM과 한 화면에 보여줄 레코드의 수가 있는 pageSIZE를 갖고
+start 와 end의 수식을 정해봅니다.
+
+start = (pageNUM-1)*pageSIZE + 1;
+
+end= start + pageSIZE - 1; 
+
+select no,title from (select rownum n, no, title, writer, pwd, content, regdate, hit, fname, fsize from board order by no desc) where n between 11 and 20;
+
+select no, title from(
+	select rownum n, no, title, writer, pwd, content, regdate, hit, fname, fsize from (select * from board order by no desc)
+)
+where n between 11 and 20;
+
+-------------------------------------------------------------------------
+
+답변형 게시판(계층형 게시판)
+
+b_ref			서로 관련있는 글을 나타내기위한 그룹을 위한 컬럼
+	새글		글번호와 동일하게 설정
+	답글		부모글의 b_ref와 동일하게 설정
+	
+b_level			답글에 대한 깊이를 위한 컬럼으로 사용
+		새글		0으로설정
+		답글		부모글의 b_level + 1로 설정
+		
+b_step			서로 관련있는 글 일때에 글 출력하는 순서를 위한 컬럼
+		새글		0으로 설정
+		답글		이미 있는 답글들의 b_step을 1씩 증가
+					부모글의 b_step +1로 설정
+
+no			title		b_ref	b_level		b_step
+1			a			1		0				0
+2			b			2		0				0
+3			c			3		0				0
+4			d			2		1				2
+5			e			2		1				1
+--출력시 관련있는 걸 모아서 
+1			a
+2			b
+				e
+				d
+3			c
+
+
+--
+DCL
+DML
+DDL
+
+alter table board add b_ref number;
+alter table board add b_level number;
+alter table board add b_step number;
+
+
+
+
+
+
+
+
+
+
