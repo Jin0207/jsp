@@ -6,29 +6,32 @@ public class BoardVO {
 	private int no;
 	private String title;
 	private String writer;
-	private String content;
 	private String pwd;
+	private String content;
 	private Date regdate;
-	private long fsize;
-	private String fname;
 	private int hit;
-	public BoardVO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public BoardVO(int no, String title, String writer, String content, String pwd, Date regdate, long fsize,
-			String fname, int hit) {
+	private String fname;
+	private long fsize;
+	
+	public BoardVO(int no, String title, String writer, String pwd, String content, Date regdate, int hit, String fname,
+			long fsize) {
 		super();
 		this.no = no;
 		this.title = title;
 		this.writer = writer;
-		this.content = content;
 		this.pwd = pwd;
+		this.content = content;
 		this.regdate = regdate;
-		this.fsize = fsize;
-		this.fname = fname;
 		this.hit = hit;
+		this.fname = fname;
+		this.fsize = fsize;
 	}
+
+	public BoardVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getNo() {
 		return no;
 	}

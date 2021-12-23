@@ -1,6 +1,7 @@
 package com.sist.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -10,6 +11,22 @@ import com.sist.db.ConnectionProvider;
 import com.sist.vo.BoardVO;
 
 public class BoardDAO {
+	
+	public void updateHit(int no) {
+		String sql = "update board set hit = hit + 1 where no = ?";
+		Connection conn = ConnectionProvider.getConnection();
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, no);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("예외발생:" + e.getMessage());
+		}finally {
+			ConnectionProvider.close(conn, pstmt);
+		}
+	}
 	public int getNextNo() {
 		int no = 0;
 		String sql = "select nvl(max(no),0)+1 from board";
@@ -111,8 +128,8 @@ public class BoardDAO {
 			
 			while(rs.next()) {
 				list.add(new BoardVO(rs.getInt(1), rs.getString(2), rs.getString(3), 
-						             rs.getString(4), rs.getString(5), rs.getDate(6), 
-						             rs.getLong(7), rs.getString(8), rs.getInt(9)));
+				        rs.getString(4), rs.getString(5), rs.getDate(6), 
+				        rs.getInt(7), rs.getString(8), rs.getLong(9)));
 			}
 			
 		} catch (Exception e) {
@@ -138,7 +155,7 @@ public class BoardDAO {
 			if(rs.next()) {
 				b = new BoardVO(rs.getInt(1), rs.getString(2), rs.getString(3), 
 						        rs.getString(4), rs.getString(5), rs.getDate(6), 
-						        rs.getLong(7), rs.getString(8), rs.getInt(9));
+						        rs.getInt(7), rs.getString(8), rs.getLong(9));
 			}
 			
 		} catch (Exception e) {

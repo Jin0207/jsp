@@ -28,7 +28,15 @@ Front Controller
 	일처리를 위한 모델을 결정하고 처리된 결과에 따른
 	viewPage를 결정하는 Controller를 말한다.
 	
-	사용자가 어떤 서비스를 요청하더라도 모든 요청에 대한 처리를 하는 Controller
+			
+	==> 사용자가 어떤 서비스를 요청하더라도
+			모든 요청에 대한 처리를 하는 
+			Controller 말합니다.	
+			----------------------------------------------------
+상품목록			listGoods.do
+상품등록 폼			insertGoods.do
+상품등록 submit	insertGoodsOK.do
+	
 	
 	
 --
@@ -65,4 +73,28 @@ Front Controller
 	properties 작성시
 	클래스명과 서비스명에 공백이 존재해서는 안됨
 	
+	
+	
+	 public SistController() {
+        super();
+        // TODO Auto-generated constructor stub
+        map = new HashMap<String, SistAction>();
+        map.put("listGoods.do", new ListGoodsAction());
+        map.put("insertGoods.do", new InsertGoodsAction());
+        map.put("insertGoodsOK.do", new InsertGoodsOKAction());
+        map.put("detailGoods.do", new DetailGoodsAction());
+    }
+    
+   위와같이 map에 
+   		일일이 서비스명과 일처리 담당을 위한 객체를 생성하여 
+   		등록하였습니다.
+   		
+   		만약 새로운 서비스가 추가될때마나
+   		클래스를 수정해야 하는 것은 
+   		번거로운 일입니다.
+   		
+   		서비스명과 일처리담당객체를 
+   		설정하는 설정파일을 
+   		이용한 것으로 수정해 봅시다.
+   		
 		

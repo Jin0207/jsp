@@ -14,7 +14,7 @@
 		작성자: <input type="text" name="writer"><br>
 		글암호: <input type="password" name="pwd"><br>
 		글내용: <br>
-		<textarea rows="10" cols="80" name="context"></textarea><br>
+		<textarea rows="10" cols="80" name="content"></textarea><br>
 		파일: <input type="file" name="uploadFile"><br>
 		<input type="submit" value="등록">
 		<input type="reset" value="취소">		
